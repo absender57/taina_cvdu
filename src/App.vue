@@ -1,19 +1,11 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-</template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-});
+<script setup lang="ts">
+import "normalize.css";
+import cvdu_main from "./components/cvdu_main.vue";
 </script>
+
+<template>
+  <cvdu_main />
+</template>
 
 <style lang="scss">
 #app {
@@ -22,6 +14,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 5px;
+  background-color: rgb(39, 39, 39);
 }
 </style>
