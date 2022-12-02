@@ -5,25 +5,34 @@ console.log(numbers);
 </script>
 
 <template>
-  <ul class="container">
-    <li v-for="n in numbers" :key="n">route{{ n }}</li>
-  </ul>
+  <div>
+    <p>route setting</p>
+    <ul class="container">
+      <li v-for="n in numbers" :key="n">route{{ n }}</li>
+    </ul>
+  </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
   flex-wrap: wrap;
   flex-direction: row;
   background-color: rgb(239, 239, 239);
   padding: 2px;
-  width: 50%;
+}
+
+P {
+  width: auto;
+  color: chartreuse;
 }
 
 li {
-  margin-right: 10px;
+  padding: 2px 0;
   flex: 1;
+  border: dashed rgb(61, 95, 10) 1px;
 }
 </style>

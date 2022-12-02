@@ -10,7 +10,7 @@ const count: string = ref(0);
 <template>
   <tool_bar class="tool_bar" />
   <route_setting class="route_setting" />
-  <point_setting class="point_setting" />
+  <point_setting class="point_setting non_visible" />
   <p>線形画面を表示{{ count }}</p>
 </template>
 
@@ -32,9 +32,14 @@ p {
   position: absolute;
   border: #42b983 solid 2px;
 }
+
 .point_setting {
   position: absolute;
   border: #42b983 solid 2px;
   left: 100px;
+}
+
+.non_visible {
+  display: none;
 }
 </style>
