@@ -1,14 +1,17 @@
-<script setup lang="ts">
-console.log("test");
-</script>
+<!-- <script setup lang="ts">
+</script> -->
 
 <template>
   <div class="container">
-    <button class="manu">Route Setting [F2]</button>
-    <button class="manu">Point Control [F3]</button>
+    <button class="manu" @click="$emit('eventClick', 'routeSetting')">
+      Route Setting [F2]
+    </button>
+    <button class="manu" @click="$emit('eventClick', 'pointControl')">
+      Point Control [F3]
+    </button>
     <button class="manu">Row Data [F1]</button>
     <button class="manu">Others [F4]</button>
-    <button class="manu" @click="openChildWindow">5</button>
+    <button class="manu">5</button>
   </div>
 </template>
 

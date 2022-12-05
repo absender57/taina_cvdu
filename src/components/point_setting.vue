@@ -1,28 +1,45 @@
-<!-- <script setup lang="ts">
-</script> -->
+<script setup lang="ts">
+const number = 100;
+const numbers = [...Array(number)].map((val, idx) => idx);
+console.log(numbers);
+</script>
 
 <template>
-  <ul class="container">
-    <li>point1</li>
-    <li>point1</li>
-    <li>point1</li>
-    <li>point1</li>
-    <li>point1</li>
-    <li>point1</li>
-    <li>point1</li>
-  </ul>
+  <div>
+    <p>point control</p>
+    <ul class="container">
+      <li v-for="n in numbers" :key="n">point{{ n }}</li>
+    </ul>
+  </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  flex-wrap: wrap;
   flex-direction: row;
   background-color: rgb(239, 239, 239);
   padding: 2px;
 }
+
+P {
+  width: auto;
+  color: #42b983;
+  background-color: rgb(239, 239, 239);
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
 li {
-  margin-right: 10px;
+  padding: 2px 0;
+  flex: 1;
+  color: #42b983;
+  border: dashed rgb(61, 95, 10) 1px;
 }
 </style>

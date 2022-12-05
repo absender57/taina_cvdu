@@ -27,12 +27,19 @@ console.log(numbers);
 
 P {
   width: auto;
-  color: chartreuse;
+  color: #42b983;
+  background-color: rgb(239, 239, 239);
+  margin: 0;
+}
+
+ul {
+  margin: 0;
 }
 
 li {
   padding: 2px 0;
   flex: 1;
+  color: #42b983;
   border: dashed rgb(61, 95, 10) 1px;
 }
 </style>
