@@ -4,7 +4,7 @@ console.log("test");
 
 <template>
   <p>線形表示を行う</p>
-  <div>
+  <div class="contents">
     <span>station name</span>
     <span>画面切替ボタン</span>
     <div>
@@ -13,6 +13,16 @@ console.log("test");
       <span>システム状態プルダウンウィンドウ</span>
       <span>ローカルCTC切替ボタン</span>
       <span>cvdu1系、2系切替ボタン</span>
+      <span>電源故障ボタン</span>
+      <span>連動故障ボタン</span>
+      <span>転轍器故障ボタン</span>
+      <span>断灯故障ボタン</span>
+      <span>保養ボタン</span>
+      <span>封鎖ボタン</span>
+      <span>調車ボタン</span>
+      <span>取り消しボタン</span>
+      <span>進行定位確認及び取り消しボタン</span>
+      <span></span>
     </div>
   </div>
 </template>
@@ -22,17 +32,20 @@ console.log("test");
 .main {
   height: 90vh;
 }
-p {
-  margin: 5px;
-  color: #42b983;
-  font-size: 80px;
-  border: dashed;
-  height: 1.2em;
-}
-span {
-  border: #42b983 solid;
-  color: #42b983;
-  margin: 2px 5px;
+.contents {
+  p {
+    margin: 5px;
+    color: #42b983;
+    font-size: 80px;
+    border: dashed;
+    height: 1.2em;
+  }
+  span {
+    border: #42b983 solid;
+    color: #42b983;
+    margin: 5px;
+    display: inline-block;
+  }
 }
 
 .tool_bar {
