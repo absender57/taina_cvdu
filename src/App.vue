@@ -14,7 +14,8 @@ import cvdu_main from "./components/cvdu_main.vue";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 5px;
-  background-color: rgb(39, 39, 39);
+  --main-bgColor: rgb(39, 39, 39);
+  --main-shapeColor: rgb(66, 185, 131);
+  background-color: var(--main-bgColor);
 }
 </style>

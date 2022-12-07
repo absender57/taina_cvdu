@@ -3,7 +3,6 @@ console.log("test");
 </script>
 
 <template>
-  <p>線形表示を行う</p>
   <div class="contents">
     <span>station name</span>
     <span>画面切替ボタン</span>
@@ -32,17 +31,15 @@ console.log("test");
 .main {
   height: 90vh;
 }
+
 .contents {
-  p {
-    margin: 5px;
-    color: #42b983;
-    font-size: 80px;
-    border: dashed;
-    height: 1.2em;
-  }
+  margin: 5px;
+  color: var(--main-shapeColor);
+  border: dashed;
+
   span {
-    border: #42b983 solid;
-    color: #42b983;
+    border: var(--main-shapeColor) solid;
+    color: var(--main-shapeColor);
     margin: 5px;
     display: inline-block;
   }
@@ -54,12 +51,12 @@ console.log("test");
 
 .route_setting {
   position: absolute;
-  border: #42b983 solid 2px;
+  border: var(--main-shapeColor) solid 2px;
 }
 
 .point_setting {
   position: absolute;
-  border: #42b983 solid 2px;
+  border: var(--main-shapeColor) solid 2px;
 }
 
 .non_visible {

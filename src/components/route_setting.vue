@@ -27,7 +27,7 @@ console.log(numbers);
 
 P {
   width: auto;
-  color: #42b983;
+  color: var(--main-shapeColor);
   background-color: rgb(239, 239, 239);
   margin: 0;
 }
@@ -39,7 +39,7 @@ ul {
 li {
   padding: 2px 0;
   flex: 1;
-  color: #42b983;
+  color: var(--main-shapeColor);
   border: dashed rgb(61, 95, 10) 1px;
 }
 </style>

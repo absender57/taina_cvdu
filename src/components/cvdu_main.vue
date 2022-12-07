@@ -30,26 +30,28 @@ const openedManu = (param: string) => {
     class="point_setting"
     :class="{ non_visible: pointControlIsNonvible }"
   />
-  <line_view />
+  <line_view class="line_view" />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.main {
-  height: 90vh;
-}
 .tool_bar {
   position: relative;
+  height: 10vh;
+}
+
+.line_view {
+  height: 90vh;
 }
 
 .route_setting {
   position: absolute;
-  border: #42b983 solid 2px;
+  border: var(--main-shapeColor) solid 2px;
 }
 
 .point_setting {
   position: absolute;
-  border: #42b983 solid 2px;
+  border: var(--main-shapeColor) solid 2px;
 }
 
 .non_visible {
