@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import station_Name from "./station_name.vue";
+import axle_Counter from "./axle_counter.vue";
 console.log("test");
 </script>
 
 <template>
   <div class="contents">
-    <span>station name</span>
+    <station_Name />
     <span>画面切替ボタン</span>
+    <axle_Counter />
     <div>
       <span>列車検知</span>
       <span>現在故障状態プルダウンウィンドウ</span>
