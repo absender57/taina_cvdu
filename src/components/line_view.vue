@@ -6,9 +6,9 @@ console.log("test");
 
 <template>
   <div class="contents">
+    <axle_Counters />
     <station_Name />
     <span>画面反転</span>
-    <axle_Counters />
     <div>
       <span>列車検知</span>
       <span>現在故障状態プルダウンウィンドウ</span>
@@ -38,7 +38,7 @@ console.log("test");
 .contents {
   margin: 5px;
   color: var(--main-shapeColor);
-  border: dashed;
+  border: solid;
 
   span {
     border: var(--main-shapeColor) solid;

@@ -2,19 +2,15 @@
 import { FLATTENABLE_KEYS, stringLiteral } from "@babel/types";
 import { ref } from "vue";
 import { defineProps } from "vue";
-const props = defineProps<{
-  directionName: string;
-}>();
-console.log("test");
 const state = ref({
-  direction: "南東",
+  name: "NW",
   useState: {
-    axle1: false,
+    axle1: true,
     axle2: false,
     both: false,
   },
   failiureState: {
-    axle1: true,
+    axle1: false,
     axle2: false,
   },
 });
@@ -22,7 +18,7 @@ const state = ref({
 
 <template>
   <div class="contents">
-    <span class="direction">{{ directionName }}</span>
+    <span class="direction">{{ state.name }}</span>
     <span class="axle1">計軸1</span>
     <span class="both">同時</span>
     <span class="axle2">計軸2</span>
@@ -45,7 +41,7 @@ const state = ref({
 .contents {
   margin: 5px;
   color: var(--main-shapeColor);
-  border: dashed;
+  border: solid;
   width: fit-content;
   display: grid;
   grid-template-columns: repeat(2, auto) 50px repeat(2, auto);

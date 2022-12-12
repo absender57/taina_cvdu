@@ -3,8 +3,7 @@ import { FLATTENABLE_KEYS } from "@babel/types";
 import axle_Counter from "./axle_counter.vue";
 
 import { ref } from "vue";
-console.log("test");
-const directions = ref(["NE", "NW", "M", "SE", "SW"]);
+const directions = ["NE", "NW", "M", "SE", "SW"];
 </script>
 
 <template>
@@ -12,7 +11,7 @@ const directions = ref(["NE", "NW", "M", "SE", "SW"]);
     <axle_Counter
       v-for="direction in directions"
       :key="direction"
-      :directionName="direction"
+      :direction-state="direction"
     />
   </div>
 </template>
