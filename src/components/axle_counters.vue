@@ -1,17 +1,22 @@
 <script setup lang="ts">
 import { FLATTENABLE_KEYS } from "@babel/types";
-import axle_Counter from "./axle_counter.vue";
-
 import { ref } from "vue";
-const directions = ["NE", "NW", "M", "SE", "SW"];
+import axle_Counter from "./axle_counter.vue";
+const directions = [
+  { title: "NE", useState: { axle1: true } },
+  { title: "NW", useState: { axle1: true } },
+  { title: "M", useState: { axle1: true } },
+  { title: "SE", useState: { axle1: true } },
+  { title: "SW", useState: { axle1: true } },
+];
 </script>
 
 <template>
   <div class="contents">
     <axle_Counter
       v-for="direction in directions"
-      :key="direction"
-      :direction-state="direction"
+      :key="direction.title"
+      v-bind:direction="direction"
     />
   </div>
 </template>

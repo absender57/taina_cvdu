@@ -2,6 +2,14 @@
 import { FLATTENABLE_KEYS, stringLiteral } from "@babel/types";
 import { ref } from "vue";
 import { defineProps } from "vue";
+const props = defineProps<{
+  direction: {
+    title: string;
+    useState: {
+      axle1: boolean;
+    };
+  };
+}>();
 const state = ref({
   name: "NW",
   useState: {
@@ -18,11 +26,14 @@ const state = ref({
 
 <template>
   <div class="contents">
-    <span class="direction">{{ state.name }}</span>
+    <span class="direction">{{ props.direction.title }}</span>
     <span class="axle1">計軸1</span>
     <span class="both">同時</span>
     <span class="axle2">計軸2</span>
-    <span class="use1" :class="{ yellow: state.useState.axle1 }"></span>
+    <span
+      class="use1"
+      :class="{ yellow: props.direction.useState.axle1 }"
+    ></span>
     <span class="use_both" :class="{ green: state.useState.both }"></span>
     <span class="use2" :class="{ yellow: state.useState.axle2 }"></span>
     <span class="failiure1" :class="{ red: state.failiureState.axle1 }">
@@ -53,6 +64,7 @@ const state = ref({
     border: solid var(--main-shapeColor);
     margin: 2px;
   }
+
   .direction {
     grid-column: 1 / 6;
     grid-row: 1;
@@ -64,16 +76,19 @@ const state = ref({
     grid-row: 2;
     border: 0ch;
   }
+
   .both {
     grid-column: 3;
     grid-row: 2;
     border: 0ch;
   }
+
   .axle2 {
     grid-column: 4 / 6;
     grid-row: 2;
     border: 0ch;
   }
+
   .use1 {
     grid-column: 1 / 3;
     grid-row: 3;
@@ -121,13 +136,16 @@ const state = ref({
     grid-column: 4 / 6;
     grid-row: 5;
   }
+
   .red {
     color: white;
     background-color: red;
   }
+
   .yellow {
     background-color: yellow;
   }
+
   .green {
     background-color: green;
   }
