@@ -11,10 +11,6 @@ console.log("stationName");
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.main {
-  height: 90vh;
-}
-
 .contents {
   margin: 5px;
   color: var(--main-shapeColor);

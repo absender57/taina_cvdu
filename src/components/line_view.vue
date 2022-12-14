@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import station_Name from "./station_name.vue";
 import axle_Counters from "./axle_counters.vue";
+import station_Name from "./station_name.vue";
+import failiure_status from "./fail_status.vue";
 console.log("test");
 </script>
 
@@ -8,23 +9,35 @@ console.log("test");
   <div class="contents">
     <axle_Counters />
     <station_Name />
+    <failiure_status />
     <span>画面反転</span>
     <div>
-      <span>列車検知</span>
-      <span>現在故障状態プルダウンウィンドウ</span>
       <span>システム状態プルダウンウィンドウ</span>
-      <span>ローカルCTC切替ボタン</span>
-      <span>cvdu1系、2系切替ボタン</span>
+      <div>
+        <span>LOCAL</span>
+        <span>CTC</span>
+      </div>
+      <div>
+        <span>CVDU1</span>
+        <span>CVDU2</span>
+      </div>
       <span>電源故障ボタン</span>
       <span>連動故障ボタン</span>
       <span>転轍器故障ボタン</span>
       <span>断灯故障ボタン</span>
-      <span>保養ボタン</span>
-      <span>封鎖ボタン</span>
+      <div>
+        <span>A区保養</span>
+        <button>應用</button>
+        <button>取消</button>
+      </div>
+      <div>
+        <span>NE封鎖</span>
+        <button>控制</button>
+        <button>取消</button>
+      </div>
       <span>調車ボタン</span>
       <span>取り消しボタン</span>
       <span>進行定位確認及び取り消しボタン</span>
-      <span></span>
     </div>
   </div>
 </template>

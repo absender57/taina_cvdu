@@ -7,6 +7,12 @@ const props = defineProps<{
     title: string;
     useState: {
       axle1: boolean;
+      axle2: boolean;
+      both: boolean;
+    };
+    failiureState: {
+      axle1: boolean;
+      axle2: boolean;
     };
   };
 }>();
@@ -25,34 +31,53 @@ const state = ref({
 </script>
 
 <template>
-  <div class="contents">
+  <div class="axleCounter">
     <span class="direction">{{ props.direction.title }}</span>
     <span class="axle1">計軸1</span>
     <span class="both">同時</span>
     <span class="axle2">計軸2</span>
     <span
       class="use1"
-      :class="{ yellow: props.direction.useState.axle1 }"
+      :class="{
+        yellow: props.direction.useState.axle1,
+        red: !props.direction.useState.axle1,
+      }"
     ></span>
-    <span class="use_both" :class="{ green: state.useState.both }"></span>
-    <span class="use2" :class="{ yellow: state.useState.axle2 }"></span>
-    <span class="failiure1" :class="{ red: state.failiureState.axle1 }">
+    <span
+      class="use_both"
+      :class="{ green: props.direction.useState.both }"
+    ></span>
+    <span
+      class="use2"
+      :class="{
+        yellow: props.direction.useState.axle2,
+        red: !props.direction.useState.axle2,
+      }"
+    ></span>
+    <span
+      class="failiure1"
+      :class="{ red: props.direction.failiureState.axle1 }"
+    >
       故障
     </span>
-    <span class="failiure2" :class="{ red: state.failiureState.axle2 }">
+    <span
+      class="failiure2"
+      :class="{ red: props.direction.failiureState.axle2 }"
+    >
       故障
     </span>
-    <a class="reset1">重置</a>
-    <a class="reset2">重置</a>
+    <button class="reset1">重置</button>
+    <button class="reset2">重置</button>
   </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.contents {
-  margin: 5px;
+.axleCounter {
   color: var(--main-shapeColor);
-  border: solid;
+  border-top: solid var(--main-shapeColor);
+  border-left: solid var(--main-shapeColor);
+  border-bottom: solid var(--main-shapeColor);
   width: fit-content;
   display: grid;
   grid-template-columns: repeat(2, auto) 50px repeat(2, auto);
@@ -116,25 +141,31 @@ const state = ref({
   .failiure1 {
     grid-column: 1 / 3;
     grid-row: 4;
-    border-radius: 20% / 50%;
+    border-radius: 10% / 50%;
     padding: 0px 5px;
   }
 
   .failiure2 {
     grid-column: 4 / 6;
     grid-row: 4;
-    border-radius: 20% / 50%;
+    border-radius: 10% / 50%;
     padding: 0px 5px;
   }
 
   .reset1 {
     grid-column: 1 / 3;
     grid-row: 5;
+    background-color: var(--main-bgcolor);
+    color: var(--main-shapeColor);
+    cursor: pointer;
   }
 
   .reset2 {
     grid-column: 4 / 6;
     grid-row: 5;
+    background-color: var(--main-bgcolor);
+    color: var(--main-shapeColor);
+    cursor: pointer;
   }
 
   .red {
