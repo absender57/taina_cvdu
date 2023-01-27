@@ -4,8 +4,6 @@ import route_setting from "./route_setting.vue";
 import point_setting from "./point_setting.vue";
 import line_view from "./line_view.vue";
 import { ref } from "vue";
-import { assertNullLiteralTypeAnnotation } from "@babel/types";
-const count = ref(0);
 let routeSettingIsNonvible = ref(true);
 let pointControlIsNonvible = ref(true);
 

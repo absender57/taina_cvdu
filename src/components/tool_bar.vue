@@ -39,6 +39,7 @@
     width: 70px;
     height: 70px;
     word-wrap: break-word;
+    background-color: var(--main-bgColor);
   }
 
   .failiureHistory {

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { FLATTENABLE_KEYS, stringLiteral } from "@babel/types";
-import { ref } from "vue";
 import { defineProps } from "vue";
 const props = defineProps<{
   direction: {
@@ -16,18 +14,6 @@ const props = defineProps<{
     };
   };
 }>();
-const state = ref({
-  name: "NW",
-  useState: {
-    axle1: true,
-    axle2: false,
-    both: false,
-  },
-  failiureState: {
-    axle1: false,
-    axle2: false,
-  },
-});
 </script>
 
 <template>

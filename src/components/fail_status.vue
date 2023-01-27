@@ -36,7 +36,7 @@ const lowBatterry = ref(
         <li>1LA</li>
         <li>1LB</li>
         <li>2RA</li>
-        <li>4RA</li>
+        <li>4detaiRA</li>
       </ul>
     </details>
 
@@ -83,6 +83,7 @@ const lowBatterry = ref(
   summary {
     place-content: start;
     place-items: start;
+    list-style: none;
   }
 
   ul {
